@@ -1,5 +1,7 @@
+import 'package:book_king/screens/detalles_libros_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:book_king/providers/libros_provider.dart';
+import 'package:provider/provider.dart';
 
 class ListadoLibrosScreen extends StatelessWidget {
   @override
@@ -25,8 +27,11 @@ class ListadoLibrosScreen extends StatelessWidget {
                 return ListTile(
                   title: Text(libro.titulo),
                   onTap: () {
-                    // Navegar a la pantalla de detalles del libro
-                    // Puedes implementar esta navegación según tus necesidades
+                    Navigator.pushNamed(
+                      context,
+                      DetallesLibrosScreen.routerName,
+                      arguments: libro.id,
+                    );
                   },
                 );
               },
