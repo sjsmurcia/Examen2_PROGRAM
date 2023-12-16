@@ -29,7 +29,7 @@ class ListadoLibrosScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(
                       context,
-                      DetallesLibrosScreen.routerName,
+                      DetallesLibrosScreen.routeName,
                       arguments: libro.id,
                     );
                   },
